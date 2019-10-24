@@ -456,7 +456,7 @@ ComparableCost TrajectoryCost::CalculatePathCost(
 
   if (curr_level == total_level) {
     const float end_l = curve.Evaluate(0, end_s - start_s);
-    path_cost += std::sqrt(end_l - init_sl_point_.l() / 2.0) * config_.path_end_l_cost(); // path_end_l_cost：10000
+    path_cost += std::sqrt(end_l - init_sl_point_.l() / 2.0) * config_.path_end_l_cost(); // path_end_l_cost：10000 起点和终点侧向位移间的cost
   }
   cost.smoothness_cost = path_cost;
 }
