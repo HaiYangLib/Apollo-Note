@@ -691,7 +691,7 @@ Status DpStSpeedOptimizer::Process(const SLBoundary& adc_sl_boundary,
 对于每个障碍物以及他的预测轨迹(5s内，每0.1s有一个预测轨迹点)。只需要遍历每个障碍物预测轨迹点，然后去查询路径规划得到的路径点，如果两两有重叠，就可以构造一个(累计距离s，相对时间t)的一个锚点。
 
 ```c++
-StBoundaryMapper::GetOverlapBoundaryPonts
+  //StBoundaryMapper::GetOverlapBoundaryPonts
 for (int i = 0; i < trajectory.trajectory_point_size(); ++i) {
       const auto& trajectory_point = trajectory.trajectory_point(i);
       const Box2d obs_box = obstacle.GetBoundingBox(trajectory_point);
